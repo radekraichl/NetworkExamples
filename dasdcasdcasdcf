@@ -1,0 +1,71 @@
+[33mcommit 90813d2ac5c0b9c462bb9b50212afc6cea4e0023[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: Radek Raichl <radekraichl@gmail.com>
+Date:   Wed Apr 6 00:04:50 2022 +0200
+
+    Update FtpListing
+
+[33mcommit 7e3159104e05d6af0621c36d4d34ccdd0beab91c[m
+Author: Radek Raichl <radekraichl@gmail.com>
+Date:   Tue Apr 5 23:18:24 2022 +0200
+
+    Update WiFiSSIDs
+
+[33mcommit c1944c57703a6ffb69f2ceaa338d8b215a9d9925[m
+Author: Radek Raichl <radekraichl@gmail.com>
+Date:   Tue Apr 5 23:16:28 2022 +0200
+
+    Add TraceRoute
+
+[33mcommit 49abe2895e44c7b8f47a203a8f6328a044e4c2c7[m
+Author: Radek Raichl <radekraichl@gmail.com>
+Date:   Tue Apr 5 22:54:41 2022 +0200
+
+    Update project Ping
+
+[33mcommit 98fbf51e978dacd6f216379d5f7bfa63cb88801e[m
+Author: Radek Raichl <radekraichl@gmail.com>
+Date:   Tue Apr 5 22:37:25 2022 +0200
+
+    Update PingSimple
+
+[33mcommit 4368f27d2c0db2a48857b0b04e4084f9c9351647[m
+Author: Radek Raichl <radekraichl@gmail.com>
+Date:   Tue Apr 5 22:36:28 2022 +0200
+
+    Add project Ping
+
+[33mcommit d8493100aa7aa2906b9970131571c47d25450a6e[m
+Author: Radek Raichl <radekraichl@gmail.com>
+Date:   Tue Apr 5 22:26:49 2022 +0200
+
+    Update PingSimple
+
+[33mcommit ce2f33d0cf5dd9d9d8073e7d5dca752ccd1a4be9[m
+Author: Radek Raichl <radekraichl@gmail.com>
+Date:   Tue Apr 5 22:22:02 2022 +0200
+
+    Refactoring project
+
+[33mcommit d100fb63337b98b50f4261c22237000e91086681[m
+Author: Radek Raichl <radekraichl@gmail.com>
+Date:   Wed Mar 10 20:51:29 2021 +0100
+
+    Přesunutí třídy OpenWeatherMapDataProvider do samostatného souboru
+
+[33mcommit 2770030ed7c5b434c5f6168561a553739d2ce5f0[m
+Author: Radek Raichl <radekraichl@gmail.com>
+Date:   Wed Mar 10 04:00:43 2021 +0100
+
+    Vytvoření projektu OpenWeatherMap
+
+[33mcommit b854363ae57e7deaca658b15b1904b49efc89250[m
+Author: Radek <radekraichl@gmail.com>
+Date:   Tue Sep 22 22:56:40 2020 +0200
+
+    Add project files.
+
+[33mcommit 2ca374a62f4f74339896c9a6d6568e7d140c6cfa[m
+Author: Radek <radekraichl@gmail.com>
+Date:   Tue Sep 22 22:56:37 2020 +0200
+
+    Add .gitignore and .gitattributes.
