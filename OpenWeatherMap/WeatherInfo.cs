@@ -1,33 +1,42 @@
-﻿namespace OpenWeatherMap;
-using System.Text.Json;
-using System.Text.Json.Serialization;
+﻿using System.Text.Json.Serialization;
 
+namespace OpenWeatherMap;
 
-class WeatherInfo
+internal class WeatherInfo
 {
-    [JsonPropertyName("id")] 
+    [JsonPropertyName("id")]
     public int Id { get; set; }
-    
+
     [JsonPropertyName("name")]
     public string Name { get; set; }
 
     [JsonPropertyName("coord")]
-    public Coord Coord { get; set; }
-    
-    //public float Longitude { get; set; }
-    //public float Latitude { get; set; }
-    //public string WeatherMain { get; set; }
-    //public string WeatherDescription { get; set; }
-    //public float Temperature { get; set; }
-    //public int Pressure { get; set; }
-    //public int Humidity { get; set; }
+    public Coordinates Coordinates { get; set; }
+
+    [JsonPropertyName("weather")]
+    public Weather[] Weather { get; set; }
 }
 
-class Coord
+internal class Coordinates
 {
     [JsonPropertyName("lon")]
-    public float Lon { get; set; }
-    
+    public float Longitude { get; set; }
+
     [JsonPropertyName("lat")]
-    public float Lat { get; set; }
+    public float Latitude { get; set; }
+}
+
+internal class Weather
+{
+    [JsonPropertyName("id")]
+    public int Id { get; set; }
+
+    [JsonPropertyName("main")]
+    public string Main { get; set; }
+
+    [JsonPropertyName("description")]
+    public string Description { get; set; }
+
+    [JsonPropertyName("icon")]
+    public string Icon { get; set; }
 }

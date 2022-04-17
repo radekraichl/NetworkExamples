@@ -1,5 +1,4 @@
-﻿using System;
-using System.Net.Http;
+﻿using System.Net.Http;
 using System.Text.Json;
 using System.Threading.Tasks;
 
@@ -12,55 +11,28 @@ internal class OpenWeatherMapDataProvider
     public async Task<WeatherInfo> GetWeatherByCityNameAsync(string cityName)
     {
         string request = $"https://api.openweathermap.org/data/2.5/weather?q={cityName}&units=metric&appid={API_KEY}&lang=cz";
-        return await GetWeatherInfo(request);
+        return await GetWeatherInfoAsync(request);
     }
 
     public async Task<WeatherInfo> GetWeatherByCityIDAsync(string id)
     {
         string request = $"https://api.openweathermap.org/data/2.5/weather?id={id}&units=metric&appid={API_KEY}&lang=cz";
-        return await GetWeatherInfo(request);
+        return await GetWeatherInfoAsync(request);
     }
 
-    public static async Task<string> GetJsonFromRequestAsync(string request)
+    private static async Task<WeatherInfo> GetWeatherInfoAsync(string request)
     {
-        using HttpClient httpClient = new();      
+        using HttpClient httpClient = new();
         HttpResponseMessage response = await httpClient.GetAsync(request);
 
         if (response.IsSuccessStatusCode)
+        
         {
             string jsonString = await response.Content.ReadAsStringAsync();
-            JsonDocument jsonDocument = JsonDocument.Parse(jsonString);
 
-            Console.WriteLine(JsonSerializer.Serialize(jsonDocument, new JsonSerializerOptions { WriteIndented = true }));
+            using JsonDocument jsonDocument = JsonDocument.Parse(jsonString);
 
-            return JsonSerializer.Serialize(jsonDocument, new JsonSerializerOptions { WriteIndented = true });
-        }
-
-        return null;
-    }
-
-    private static async Task<WeatherInfo> GetWeatherInfo(string request)
-    {
-        string jsonString = await GetJsonFromRequestAsync(request);
-
-        if (jsonString != null)
-        {
-            JsonDocument jsonDocument = JsonDocument.Parse(jsonString);
-
-            WeatherInfo weatherInfo = JsonSerializer.Deserialize<WeatherInfo>(jsonDocument);
-
-            return weatherInfo;
-
-            //return new WeatherInfo
-            //{
-            //    Longitude = (float)jsonDocument.RootElement.GetProperty("coord").GetProperty("lon").GetDouble(),
-            //    Latitude = (float)jsonDocument.RootElement.GetProperty("coord").GetProperty("lat").GetDouble(),
-            //    WeatherMain = jsonDocument.RootElement.GetProperty("weather")[0].GetProperty("main").GetString(),
-            //    WeatherDescription = jsonDocument.RootElement.GetProperty("weather")[0].GetProperty("description").GetString(),
-            //    Temperature = (float)jsonDocument.RootElement.GetProperty("main").GetProperty("temp").GetDouble(),
-            //    Humidity = (int)jsonDocument.RootElement.GetProperty("main").GetProperty("humidity").GetDouble(),
-            //    Pressure = (int)jsonDocument.RootElement.GetProperty("main").GetProperty("pressure").GetDouble(),
-            //};
+            return JsonSerializer.Deserialize<WeatherInfo>(jsonDocument);
         }
 
         return null;

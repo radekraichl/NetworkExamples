@@ -1,0 +1,46 @@
+﻿{
+  "base": "stations",
+  "clouds": {
+    "all": 98
+  },
+  "cod": 200,
+  "coord": {
+    "lon": 13.8551,
+    "lat": 50.7162
+  },
+  "dt": 1649283719,
+  "id": 3063548,
+  "main": {
+    "temp": 5.78,
+    "feels_like": 1.78,
+    "temp_min": 5.16,
+    "temp_max": 7.6,
+    "pressure": 1001,
+    "humidity": 83,
+    "sea_level": 1001,
+    "grnd_level": 917
+  },
+  "name": "Fojtovice",
+  "sys": {
+    "type": 2,
+    "id": 2016283,
+    "country": "CZ",
+    "sunrise": 1649305662,
+    "sunset": 1649353524
+  },
+  "timezone": 7200,
+  "visibility": 10000,
+  "weather": [
+    {
+      "id": 804,
+      "main": "Clouds",
+      "description": "zata\u017Eeno",
+      "icon": "04n"
+    }
+  ],
+  "wind": {
+    "speed": 6.26,
+    "deg": 210,
+    "gust": 10.28
+  }
+}
