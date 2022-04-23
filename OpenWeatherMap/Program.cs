@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Threading;
 using System.Threading.Tasks;
 
 namespace OpenWeatherMap
@@ -15,9 +14,9 @@ namespace OpenWeatherMap
             Console.WriteLine($"Zeměpisná šířka: {weather.Coordinates.Longitude}");
             Console.WriteLine($"Zeměpisná délka: {weather.Coordinates.Latitude}");
             Console.WriteLine($"Počasí:          {weather.Weather[0].Main}, {weather.Weather[0].Description}");
-            //Console.WriteLine($"Teplota:         {MathF.Round(weather.Temperature, 1)}");
-            //Console.WriteLine($"Vlhkost:         {weather.Humidity}");
-            //Console.WriteLine($"Tlak:            {weather.Pressure}");
+            Console.WriteLine($"Teplota:         {weather.Main.Temperature}");
+            Console.WriteLine($"Vlhkost:         {weather.Main.Humidity}");
+            Console.WriteLine($"Tlak:            {weather.Main.Pressure}");
         }
     }
 }

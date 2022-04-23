@@ -13,8 +13,24 @@ internal class WeatherInfo
     [JsonPropertyName("coord")]
     public Coordinates Coordinates { get; set; }
 
+    [JsonPropertyName("main")]
+    public Main Main { get; set; }
+
     [JsonPropertyName("weather")]
     public Weather[] Weather { get; set; }
+}
+
+internal class Main
+{
+    [JsonPropertyName("temp")]
+    public float Temperature { get; set; }
+
+    [JsonPropertyName("pressure")]
+    public int Pressure { get; set; }
+
+    [JsonPropertyName("humidity")]
+    public int Humidity { get; set; }
+
 }
 
 internal class Coordinates
